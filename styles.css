@@ -64,3 +64,23 @@ Header
     display: block;
   }
 }
+/* 
+==========
+Hero Section
+==========
+*/
+.hero-section {
+  background: #31313f;
+}
+.hero-content {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-img {
+  border-radius: 50%;
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
