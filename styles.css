@@ -120,6 +120,24 @@ Hero Section
   align-items: center;
   /* flex-direction: column; */
 }
+@media screen and (max-width: 773px) {
+  .hero-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-img {
+    margin-top: 30px;
+  }
+  .about-btn {
+    margin-bottom: 10px;
+  }
+  .section-heading {
+    text-align: center;
+  }
+  .tech-grid {
+    justify-content: center;
+  }
+}
 .hero-text {
   font-family: var(--main-font);
 }
@@ -185,13 +203,12 @@ Tech Section
 }
 /* add justify center on smaller screens */
 .tech-grid {
+  padding-top: 58px;
   display: flex;
-  /* justify-content: center; */
   gap: 10px;
   flex-wrap: wrap;
 }
 .tech-card {
-  /* margin: 0 auto; */
   width: 256px;
   height: 254px;
   background: var(--low-priority);
