@@ -231,3 +231,73 @@ Tech Section
   height: 55px;
   margin: 97px 190px 8px 24px;
 }
+/* 
+==========
+Services section
+==========
+*/
+.services-section {
+  background: var(--section-background);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2;
+  place-items: center;
+  row-gap: 16px;
+}
+@media screen and (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 538px) {
+  .services-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.services-card {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 341px;
+  height: 338px;
+  border: 3px solid var(--primary-color);
+  border-radius: 16px;
+  background: var(--section-background);
+  color: white;
+}
+.services-card img {
+  /* width: 55px;
+  height: 55px; */
+  /* padding-top: 75px; */
+}
+
+.services-card span {
+  text-transform: uppercase;
+  margin-top: 8px;
+  color: white;
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 24px;
+  /* align-items: center; */
+  /* display: block; */
+}
+.services-card p {
+  /* padding: 0 23px; */
+  /* margin-top: 16px; */
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 32px;
+  padding-bottom: 75px;
+  width: 296px;
+  height: 64px;
+}
+.services-img {
+  width: 55px;
+  height: 55px;
+  /* padding-top: 75px; */
+}
