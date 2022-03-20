@@ -28,6 +28,12 @@ ul {
 Components
 ==========
 */
+.section-heading {
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--primary-color);
+}
 .btn {
   font-family: var(--main-font);
   font-weight: 600;
@@ -48,19 +54,24 @@ Header
 ==========
 */
 .header {
+  width: 100%;
+  /* position: fixed; */
+  /* z-index: 1; */
   padding: 1rem;
   background: #181824;
   font-family: var(--main-font);
   font-weight: 600;
+  box-shadow: 5px 5px 15px 5px #000000;
   /* display: flex; */
 }
 .header-content {
+  /* padding-top: 2rem; */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .logo-container {
-  font-size: 26px;
+  /* font-size: 26px; */
   color: var(--primary-color);
 }
 .navbar {
@@ -78,6 +89,11 @@ Header
 .navbar li {
   font-size: 18px;
   padding: 0 1rem;
+  transition: 400ms;
+  cursor: pointer;
+}
+.navbar li:hover {
+  color: var(--primary-color);
 }
 @media screen and (max-width: 768px) {
   .navbar {
@@ -100,7 +116,7 @@ Hero Section
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   /* flex-direction: column; */
 }
@@ -141,4 +157,60 @@ Hero Section
 
   width: 100%;
   height: 128px;
+}
+/* 
+==========
+About section
+==========
+*/
+.about-section {
+  background: var(--section-background);
+}
+.about-content {
+  padding-top: 55px;
+}
+.about-content p {
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--white);
+}
+/* 
+==========
+Tech Section
+==========
+*/
+.tech-section {
+  background: var(--section-background);
+}
+/* add justify center on smaller screens */
+.tech-grid {
+  display: flex;
+  /* justify-content: center; */
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tech-card {
+  /* margin: 0 auto; */
+  width: 256px;
+  height: 254px;
+  background: var(--low-priority);
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.tech-card span {
+  display: block;
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 24px;
+  margin: 14px 101px 24px 24px;
+  line-height: 36px;
+}
+.tech-img {
+  width: 55px;
+  height: 55px;
+  margin: 97px 190px 8px 24px;
 }
