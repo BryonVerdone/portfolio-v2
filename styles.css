@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+:root {
+  --white: #ffffff;
+  --light-color: #f5f5f5;
+  --low-priority: #848191;
+  --primary-color: #7562e0;
+  --secondary-color: #282162;
+  --dark-color: #000036;
+  --section-background: #1a1a29;
+  --main-font: 'Poppins', sans-serif;
+}
+.container {
+  max-width: 1066px;
+  margin: 0 auto;
+}
+/* 
+==========
+Components
+==========
+*/
+.btn {
+  font-family: var(--main-font);
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 16px;
+  color: var(--white);
+  width: 160px;
+  height: 48px;
+  border-color: transparent;
+  border-radius: 8px;
+  padding: 12px 25px;
+  background: var(--primary-color);
+  font-family: var(--main-font);
+}
+/* 
+==========
+Header
+==========
+*/
+.header {
+  padding: 1rem;
+  background: #181824;
+  font-family: var(--main-font);
+  font-weight: 600;
+  /* display: flex; */
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-container {
+  font-size: 26px;
+  color: var(--primary-color);
+}
+.navbar {
+  color: var(--white);
+}
+.mobile-btn {
+  display: none;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar li {
+  font-size: 18px;
+  padding: 0 1rem;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  .mobile-btn {
+    display: block;
+  }
+}
+/* 
+==========
+Hero Section
+==========
+*/
+.hero-section {
+  background: var(--section-background);
+}
+.hero-content {
+  color: var(--white);
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-direction: column; */
+}
+.hero-text {
+  font-family: var(--main-font);
+}
+.hero-text span {
+  vertical-align: top;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.hero-text h1 {
+  line-height: 78px;
+  font-size: 52px;
+}
+.hero-text p {
+  font-size: 18px;
+  margin: 12px 0;
+}
+.about-btn {
+  margin-right: 32px;
+}
+.projects-btn {
+  border: solid 2px var(--primary-color);
+  background: var(--section-background);
+}
+.hero-img {
+  width: 296px;
+  height: 444px;
+  border-radius: 35px;
+  /* width: 100%; */
+  object-fit: cover;
+  /* height: auto; */
+}
+.divider {
+  background: #181824;
+
+  width: 100%;
+  height: 128px;
+}
