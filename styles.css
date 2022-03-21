@@ -164,11 +164,12 @@ Hero Section
   border: solid 2px var(--primary-color);
   background: var(--section-background);
 }
+/* add hero img container and make img width 100% */
 .hero-img {
-  width: 296px;
+  /* width: 296px; */
   height: 444px;
   border-radius: 35px;
-  /* width: 100%; */
+  width: 100%;
   object-fit: cover;
   /* height: auto; */
 }
@@ -252,12 +253,12 @@ Services section
   place-items: center;
   row-gap: 16px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1025px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 538px) {
+@media screen and (max-width: 686px) {
   .services-grid {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -268,7 +269,7 @@ Services section
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 341px;
+  min-width: 320px;
   height: 338px;
   border: 3px solid var(--primary-color);
   border-radius: 16px;
@@ -316,8 +317,10 @@ Projects section
   background: var(--section-background);
 }
 .projects-grid {
+  /* justify-content: center; */
   display: flex;
   flex-wrap: wrap;
+  column-gap: 10px;
 }
 .projects-card {
   /* display: flex;
