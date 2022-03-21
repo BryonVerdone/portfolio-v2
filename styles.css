@@ -15,6 +15,8 @@ ul {
   --low-priority: #848191;
   --primary-color: #7562e0;
   --secondary-color: #282162;
+  --grey: #31313f;
+
   --dark-color: #000036;
   --section-background: #1a1a29;
   --main-font: 'Poppins', sans-serif;
@@ -33,6 +35,11 @@ Components
   font-weight: 600;
   font-size: 32px;
   color: var(--primary-color);
+}
+.project-text {
+  font-size: 18px;
+  color: var(--white);
+  font-family: var(--main-font);
 }
 .btn {
   font-family: var(--main-font);
@@ -162,11 +169,12 @@ Hero Section
   border: solid 2px var(--primary-color);
   background: var(--section-background);
 }
+/* add hero img container and make img width 100% */
 .hero-img {
-  width: 296px;
+  /* width: 296px; */
   height: 444px;
   border-radius: 35px;
-  /* width: 100%; */
+  width: 100%;
   object-fit: cover;
   /* height: auto; */
 }
@@ -239,6 +247,10 @@ Services section
 .services-section {
   background: var(--section-background);
 }
+.services-section .section-heading {
+  padding-top: 80px;
+  padding-bottom: 32px;
+}
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -246,12 +258,12 @@ Services section
   place-items: center;
   row-gap: 16px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1025px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 538px) {
+@media screen and (max-width: 686px) {
   .services-grid {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -262,7 +274,7 @@ Services section
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 341px;
+  min-width: 320px;
   height: 338px;
   border: 3px solid var(--primary-color);
   border-radius: 16px;
@@ -300,4 +312,88 @@ Services section
   width: 55px;
   height: 55px;
   /* padding-top: 75px; */
+}
+/* 
+==========
+Projects section
+==========
+*/
+.projects-section {
+  background: var(--section-background);
+}
+
+.projects-grid {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  /* column-gap: 10px; */
+  gap: 10px;
+  margin: 0 auto;
+}
+.projects-card {
+  /* display: flex;
+  align-items: center; */
+  /* justify-content: center; */
+  flex-direction: column;
+  border-radius: 8px;
+  width: 320px;
+  /* width: 100%; */
+  /* min-width: 320px; */
+  /* width: 100%; */
+  height: 417px;
+  background: var(--grey);
+}
+.projects-card img {
+  /* width: 311px; */
+  width: 100%;
+  height: 173px;
+}
+.projects-img-container {
+  /* text-align: center; */
+  padding: 16px;
+}
+.projects-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.projects-card-content p {
+  /* text-align: center; */
+  font-family: var(--main-font);
+  color: var(--white);
+  width: 303px;
+  height: 81px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  /* margin: 5px 24px 24px 16px; */
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+.projects-card-content span {
+  padding-left: 10px;
+}
+
+.projects-heading {
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 24px;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  /* width: 100%; */
+  /* text-align: center; */
+  /* margin: 18px; */
+}
+.btn-container button {
+  width: 145px;
+  height: 43px;
+  padding: 0;
+}
+.btn-container > button {
+  /* margin-right: 18px; */
 }
