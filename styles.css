@@ -36,11 +36,7 @@ Components
   font-size: 32px;
   color: var(--primary-color);
 }
-.project-text {
-  font-size: 18px;
-  color: var(--white);
-  font-family: var(--main-font);
-}
+
 .btn {
   font-family: var(--main-font);
   font-weight: 600;
@@ -321,7 +317,16 @@ Projects section
 .projects-section {
   background: var(--section-background);
 }
-
+.projects-section .section-heading {
+  padding-top: 80px;
+  margin-bottom: 16px;
+}
+.project-text {
+  font-size: 18px;
+  color: var(--white);
+  font-family: var(--main-font);
+  margin-bottom: 36px;
+}
 .projects-grid {
   width: 100%;
   justify-content: space-around;
