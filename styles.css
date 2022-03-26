@@ -63,9 +63,11 @@ Components
 Header
 ==========
 */
+/* add position fixed on scroll */
 .header {
   width: 100%;
   position: fixed;
+  /* position: relative; */
   z-index: 100;
   padding: 1rem;
   background: #181824;

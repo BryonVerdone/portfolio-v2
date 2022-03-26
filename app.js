@@ -1,7 +1,14 @@
 const mobileBtn = document.getElementById('mobile-btn');
 const mobileNav = document.getElementById('mobile-nav');
 
-mobileBtn.addEventListener('click', function () {
-  mobileNav.classList.toggle('hidden');
-  console.log('clicked');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+
+mobileLinks.forEach((item) => {
+  item.addEventListener('click', closeMobileNav);
 });
+
+// Open and close mobile nav
+function closeMobileNav() {
+  mobileNav.classList.toggle('hidden');
+}
+mobileBtn.addEventListener('click', closeMobileNav);
