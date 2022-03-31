@@ -25,10 +25,10 @@ ul {
   --section-background: #1a1a29;
   --main-font: 'Poppins', sans-serif;
 }
-.container {
+/* .container {
   max-width: 1066px;
   margin: 0 auto;
-}
+} */
 /* 
 ==========
 Components
@@ -66,8 +66,7 @@ Header
 /* add position fixed on scroll */
 .header {
   width: 100%;
-  position: fixed;
-  /* position: relative; */
+  position: relative;
   z-index: 100;
   padding: 1rem;
   background: #181824;
@@ -108,14 +107,14 @@ Header
 .navbar a:hover {
   color: var(--primary-color);
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .navbar {
     display: none;
   }
   .mobile-btn {
     display: block;
   }
-}
+} */
 /* 
 ==========
 Mobile Nav
@@ -131,11 +130,11 @@ Mobile Nav
   height: 100vh;
   border-right: 3px solid var(--primary-color);
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .mobile-nav {
     display: none;
   }
-}
+} */
 .mobile-nav ul {
   padding-top: 35px;
   z-index: 1;
@@ -174,7 +173,7 @@ Hero Section
   align-items: center;
   /* flex-direction: column; */
 }
-@media screen and (max-width: 773px) {
+/* @media screen and (max-width: 773px) {
   .hero-content {
     flex-direction: column;
     justify-content: center;
@@ -191,7 +190,7 @@ Hero Section
   .tech-grid {
     justify-content: center;
   }
-}
+} */
 .hero-text {
   font-family: var(--main-font);
 }
@@ -305,7 +304,7 @@ Services section
   place-items: center;
   row-gap: 16px;
 }
-@media screen and (max-width: 1025px) {
+/* @media screen and (max-width: 1025px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -314,7 +313,7 @@ Services section
   .services-grid {
     grid-template-columns: repeat(1, 1fr);
   }
-}
+} */
 .services-card {
   text-align: center;
   display: flex;
