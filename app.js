@@ -4,11 +4,12 @@ const mobileNav = document.getElementById('mobile-nav');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 
 mobileLinks.forEach((item) => {
-  item.addEventListener('click', closeMobileNav);
+  item.addEventListener('click', showNav);
 });
 
 // Open and close mobile nav
-function closeMobileNav() {
-  mobileNav.classList.toggle('hidden');
+function showNav() {
+  mobileNav.classList.toggle('hide');
+  console.log('shownav');
 }
-mobileBtn.addEventListener('click', closeMobileNav);
+mobileBtn.addEventListener('click', showNav);

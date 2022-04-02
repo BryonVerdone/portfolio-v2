@@ -24,6 +24,7 @@ ul {
   --dark-color: #000036;
   --section-background: #1a1a29;
   --main-font: 'Poppins', sans-serif;
+  --transition: all 0.3s ease-in-out;
 }
 .container {
   max-width: 1066px;
@@ -66,7 +67,7 @@ Header
 /* add position fixed on scroll */
 .header {
   width: 100%;
-  position: fixed;
+  position: relative;
   z-index: 100;
   padding: 1rem;
   background: #181824;
@@ -118,14 +119,19 @@ Header
 Mobile Nav
 ==========
 */
+.hide {
+  transform: translateX(100%);
+}
 .mobile-nav {
   background: var(--section-background);
   position: fixed;
+  /* opacity: 0.8; */
   top: 0;
-  left: 0;
-  width: 80%;
+  right: 0;
+  width: 100%;
   height: 100vh;
-  border-right: 3px solid var(--primary-color);
+  /* border-left: 3px solid var(--primary-color); */
+  transition: all 0.5s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .mobile-nav {
@@ -136,6 +142,7 @@ Mobile Nav
   padding-top: 35px;
   z-index: 1;
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
   height: 100%;
@@ -145,13 +152,13 @@ Mobile Nav
   font-family: var(--main-font);
   font-weight: 600;
   font-size: 18px;
-  padding: 20px 0;
-  padding-left: 5%;
-  transition: 700ms;
+  /* padding: 20px 0; */
+  /* padding-left: 5%; */
+  transition: var(--transition);
 }
 .mobile-nav a:hover {
   color: var(--primary-color);
-  background: var(--grey);
+  /* background: var(--grey); */
 }
 /* 
 ==========
@@ -214,7 +221,7 @@ Hero Section
 /* add hero img container and make img width 100% */
 .hero-img {
   height: 444px;
-  border-radius: 35px;
+  border-radius: 50px;
   width: 100%;
   object-fit: cover;
 }
@@ -253,6 +260,7 @@ Tech Section
   padding-top: 58px;
   display: flex;
   gap: 10px;
+  /* flex-shrink: 3; */
   flex-wrap: wrap;
 }
 .tech-card {
@@ -328,8 +336,6 @@ Services section
   font-family: var(--main-font);
   font-weight: 600;
   font-size: 24px;
-  /* align-items: center; */
-  /* display: block; */
 }
 .services-card p {
   font-family: var(--main-font);
