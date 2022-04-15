@@ -43,6 +43,7 @@ Components
   font-weight: 600;
   font-size: 32px;
   color: var(--primary-color);
+  padding: 0 1rem;
 }
 
 .btn {
@@ -246,6 +247,7 @@ About section
   font-size: 18px;
   line-height: 32px;
   color: var(--white);
+  padding: 0 1rem;
 }
 /* 
 ==========
@@ -258,10 +260,23 @@ Tech Section
 /* add justify center on smaller screens */
 .tech-grid {
   padding-top: 58px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   /* flex-shrink: 3; */
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+}
+@media screen and (max-width: 1102px) {
+  .tech-grid {
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 686px) {
+  .tech-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .tech-card {
   width: 256px;
@@ -293,6 +308,7 @@ Services section
 */
 .services-section {
   background: var(--section-background);
+  margin: 0 auto;
 }
 .services-section .section-heading {
   padding-top: 80px;
@@ -316,12 +332,13 @@ Services section
   }
 }
 .services-card {
+  flex-shrink: 2;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-width: 320px;
+  max-width: 320px;
   height: 338px;
   border: 3px solid var(--primary-color);
   border-radius: 16px;
@@ -367,6 +384,7 @@ Projects section
   color: var(--white);
   font-family: var(--main-font);
   margin-bottom: 36px;
+  padding: 0 1rem;
 }
 .projects-grid {
   width: 100%;
@@ -374,11 +392,12 @@ Projects section
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  padding: 2rem;
 }
 .projects-card {
   flex-direction: column;
   border-radius: 8px;
-  width: 320px;
+  max-width: 320px;
   height: 417px;
   background: var(--grey);
 }
@@ -403,7 +422,7 @@ Projects section
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
-
+  padding: 0 0.5rem;
   margin: 0 auto;
   margin-bottom: 24px;
 }
@@ -446,16 +465,21 @@ Contact section
   font-size: 18px;
   color: var(--white);
   font-family: var(--main-font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-icon {
   padding: 16px;
   padding-left: 0;
 }
+
 .contact-form {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding: 0 1rem;
 }
 form {
   width: 100%;
@@ -477,4 +501,14 @@ form :nth-child(3) {
   height: 62px;
   border: transparent;
   background: var(--grey);
+}
+/* center text above form */
+
+@media screen and (max-width: 965px) {
+  .social-icons,
+  .contact-heading,
+  .form-heading,
+  .contact-text {
+    text-align: center;
+  }
 }
